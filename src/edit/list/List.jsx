@@ -36,7 +36,7 @@ export function Grid() {
   </>
 }
 
-export function ContactsEditList(props) {
+export function EditList(props) {
   
   return <List
       title=" "
