@@ -17,7 +17,7 @@ export function ContactField(props) {
   }
 
   return <WrapperField label="contacts.contact" sortBy="val">
-  <span className="p-2"><ContactTypeIcon contact_type={labelId} /></span>
+  <span className="small-icon-wrapper"><ContactTypeIcon contact_type={labelId} /></span>
   { labelId === 1 && <EmailField {...fieldProps} {...props} /> }
   { labelId === 2 && <UrlField {...fieldProps} {...props} /> }
   { (labelId === 0 || labelId > 2) && <TextField {...fieldProps} {...props} /> }

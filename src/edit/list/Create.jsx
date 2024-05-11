@@ -4,7 +4,7 @@ import { EditForm } from "./Form";
 import { IconButton } from '@mui/material';
 import { ContactTypeIcon } from "../../show/ContactTypeIcon";
 
-export function CreateWrapper({ children, setContactType, show, setShow }) {
+export function CreateWrapper({ children, setContactType, show, setShow, ...props }) {
 
   const handleShowCreate = (contact_type) => {
     setContactType(contact_type);
@@ -15,7 +15,7 @@ export function CreateWrapper({ children, setContactType, show, setShow }) {
 
   return show
     ? <>{children}</>
-    : <div className="flex justify-end p-3">
+    : <div {...props}>
       {/* <div>{t('ra.action.create')}</div> */}
       {contactTypes.map(i => <IconButton 
         color="primary"
@@ -48,17 +48,15 @@ export function Create(props) {
 
   const more = { setContactType, show, setShow }
 
-  return <CreateWrapper {...more} >
+  return <CreateWrapper {...more} {...props}>
     <RACreate
       mutationOptions={{ onSuccess }}
       transform={transform}
       >
-      <div className="flex flex-row gap-2">
       <EditForm 
         onClose={onClose}
         contactType={contactType}
         />
-        </div>
     </RACreate>
   </CreateWrapper>
 }

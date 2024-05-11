@@ -13,8 +13,7 @@ import { ContactTypeIcon } from "../../show/ContactTypeIcon";
 const Title = () => <ListTitle label='contacts.contacts' />
 
 export function Empty() {
-  return <div className="w-full">
-    {/* <Title /> */}
+  return <div className="full-width">
     <Create />
   </div>
 }

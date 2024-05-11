@@ -15,9 +15,9 @@ import { Button, InputAdornment } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { ContactTypeIcon } from "../../show/ContactTypeIcon";
 
-export function FormToolbar({ onClose }) {
+export function FormToolbar({ onClose, ...props }) {
   const t = useTranslate();
-  return <Toolbar className="gap-2">
+  return <Toolbar {...props}>
     <SaveButton />
     <Button
       startIcon={<CloseIcon />}
@@ -57,27 +57,25 @@ export function EditItem() {
   </Edit>
 }
 
-export function EditForm({ onClose, contactType }) {
+export function EditForm({ onClose, contactType, ...props }) {
   
   const validate = [
     required(),
     contactType === 1 ? email() : undefined,
   ];
   
-  return <SimpleForm toolbar={<FormToolbar onClose={onClose} />}>
-    <div className="md:flex md:flex-row gap-2 justify-evenly">
-      <ContactTypeIcon className="m-3" contact_type={contactType} />
-      <TextInput
-        label="contacts.contact"
-        startIcon={<ContactTypeIcon contact_type={contactType} />}
-        startAdornment={
-            <InputAdornment position="start">
-              <ContactTypeIcon contact_type={contactType} />
-            </InputAdornment>
-          }
-        source="val"
-        validate={validate}
-        />
-    </div>
+  return <SimpleForm toolbar={<FormToolbar onClose={onClose} />} {...props}>
+    <ContactTypeIcon contact_type={contactType} />
+    <TextInput
+      label="contacts.contact"
+      startIcon={<ContactTypeIcon contact_type={contactType} />}
+      startAdornment={
+          <InputAdornment position="start">
+            <ContactTypeIcon contact_type={contactType} />
+          </InputAdornment>
+        }
+      source="val"
+      validate={validate}
+      />
   </SimpleForm>
 }
