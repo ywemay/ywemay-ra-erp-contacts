@@ -2,12 +2,19 @@
   "name": "ywemay-ra-erp-contacts",
   "version": "1.0.1",
   "description": "contacts related components",
-  "main": "src/index.js",
+  "main": "index.js",
   "type": "module",
   "repository": "git@github.com:ywemay/ywemay-ra-erp-contacts.git",
   "author": "Chibuc Dorin",
   "license": "MIT",
   "peerDependencies": {
+    "@mui/icons-material": "^5.14.18",
+    "@mui/material": "^5.15.15",
+    "react": "^18.2.0",
+    "react-admin": "^4.16.16",
+    "ywemay-ra-erp": "^1.0.6"
+  },
+  "devDependencies": {
     "@mui/icons-material": "^5.14.18",
     "@mui/material": "^5.15.15",
     "react": "^18.2.0",
