@@ -5,7 +5,7 @@ import { Grid } from "./Grid";
 
 export function List ({ grid, ...props }) {
   return <RAList 
-    resource="people_contacts"
+    resource="contacts"
     {...props}>
     <Grid {...grid} />
   </RAList>

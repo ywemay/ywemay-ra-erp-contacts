@@ -27,29 +27,29 @@ export function FormToolbar({ onClose, ...props }) {
   </Toolbar>
 }
 
-export function CreateItemDeprecated({onCreated, onClose, contactType}) {
+// export function CreateItemDeprecated({onCreated, onClose, contactType}) {
 
-  const notify = useNotify();
-  const { filterValues } = useListContext();
-  const transform = (data) => {
-    return {...data, ...filterValues, contact_type: contactType }
-  }
+//   const notify = useNotify();
+//   const { filterValues } = useListContext();
+//   const transform = (data) => {
+//     return {...data, ...filterValues, contact_type: contactType }
+//   }
 
-  const onSuccess = (data) => {
-    notify(`ra.notification.created`);
-    onCreated(data.id);
-  };
+//   const onSuccess = (data) => {
+//     notify(`ra.notification.created`);
+//     onCreated(data.id);
+//   };
 
-  return <Create
-    mutationOptions={{ onSuccess }}
-    transform={transform}
-    >
-    <EditForm 
-      onClose={onClose} 
-      contactType={contactType}
-      />
-  </Create>
-}
+//   return <Create
+//     mutationOptions={{ onSuccess }}
+//     transform={transform}
+//     >
+//     <EditForm 
+//       onClose={onClose} 
+//       contactType={contactType}
+//       />
+//   </Create>
+// }
 
 export function EditItem() {
   return <Edit>
