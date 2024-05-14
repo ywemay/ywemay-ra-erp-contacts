@@ -1,20 +1,21 @@
-import PhoneIcon from '@mui/icons-material/PhoneIphone';
-import EmailIcon from '@mui/icons-material/Email';
-import PublicIcon from '@mui/icons-material/Public';
-import OtherIcon from '@mui/icons-material/QuestionMark';
-
-import { default as SkypeIcon } from "../icons/Skype";
-import { default as WeChatIcon } from "../icons/WeChat";
-import { default as WhatsAppIcon } from "../icons/WhatsApp";
+import {
+  QuestionMark as Other,
+  Email,
+  Phone,
+  Skype,
+  WeChat,
+  WhatsApp,
+  Public
+} from 'ywemay-ra-icons'
 
 const icons = [
-  OtherIcon,
-  EmailIcon,
-  PhoneIcon,
-  SkypeIcon,
-  WeChatIcon,
-  WhatsAppIcon,
-  PublicIcon,
+  Other,
+  Email,
+  Phone,
+  Skype,
+  WeChat,
+  WhatsApp,
+  Public,
 ];
 
 export function ContactTypeIcon({contact_type, ...props}) {
