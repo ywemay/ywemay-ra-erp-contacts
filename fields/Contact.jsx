@@ -6,9 +6,9 @@ import {
   UrlField,
 } from 'react-admin'
 import contactLabels from "../utils/labels";
-import { ContactTypeIcon } from "./ContactTypeIcon";
+import { ContactTypeIcon } from "../utils/ContactTypeIcon";
 
-export function ContactField(props) {
+export default function ContactField(props) {
   const record = useRecordContext();
   const labelId = record.contact_type || 0;
   const fieldProps = {

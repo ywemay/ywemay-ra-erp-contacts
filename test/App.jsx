@@ -1,16 +1,17 @@
 import { Admin, Resource } from 'react-admin'
 import { dataProvider, resources } from 'ywemay-ra-erp-data-provider-mock'
-import { List, Edit, EditList } from '../'
+import { List } from '../list'
+import { Create } from '../edit/Create'
+import { Edit } from '../edit/Edit'
 
 resources.more_contacts = [...resources.contacts]
 
 export default function App() {
   return <Admin disableTelemetry dataProvider={dataProvider}>
     <Resource name="contacts" 
-      list={<List grid={{rowClick: 'edit'}} />}
-      edit={Edit} />
-    <Resource name="more_contacts"
-      options={{label: 'Embedded Contacts'}}
-      list={EditList} />
+      list={List} 
+      create={Create}
+      edit={Edit}
+      />
   </Admin>
 }

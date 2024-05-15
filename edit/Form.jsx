@@ -1,16 +1,10 @@
-import {
-  SimpleForm,
-  TextInput,
-} from "react-admin";
-import { getLabel } from "../utils/getLabel";
+import { SimpleForm } from "react-admin";
+import ContactTypeInput from "../inputs/ContactType";
+import ValInput from "../inputs/Val";
 
 export function Form(props) {
-  const {contactType } = props;
-  const label = getLabel({contactType})
   return <SimpleForm {...props}>
-    <TextInput
-      label={label} 
-      source="val" 
-      />
+    <ContactTypeInput />
+    <ValInput />
   </SimpleForm>
 }

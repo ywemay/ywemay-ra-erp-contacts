@@ -1,15 +1,13 @@
 import { Edit as RAEdit } from "react-admin";
 import { Form } from "./Form";
-import { resource } from '../resource';
 
 export const transform = (data) => {
   const { id, ...rest} = data;
   return rest;
 }
 
-export function Edit(props = {}) {
+export function Edit({form, ...props}) {
   return <RAEdit 
     transform={transform} 
-    resource={resource}
-    {...props}><Form /></RAEdit>
+    {...props}><Form {...form} /></RAEdit>
 }
