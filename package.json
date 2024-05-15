@@ -1,6 +1,6 @@
 {
   "name": "ywemay-ra-erp-contacts",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "contacts related components",
   "main": "index.js",
   "type": "module",
@@ -12,15 +12,22 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
-    "vite": "^5.2.11"
-  },
-  "dependencies": {
-    "ywemay-ra-icons": "^1.0.0",
-    "@mui/icons-material": "^5.14.18",
-    "@mui/material": "^5.15.15",
+    "vite": "^5.2.11",
     "react": "^18.2.0",
     "react-admin": "^4.16.16",
     "react-dom": "^18.3.1",
-    "react-is": "^18.3.1"
+    "react-hook-form": "^7.51.4"
+  },
+  "dependencies": {
+    "@mui/icons-material": "^5.14.18",
+    "@mui/material": "^5.15.15",
+    "react-is": "^18.3.1",
+    "ywemay-ra-icons": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-admin": "^4.16.16",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.51.4"
   }
 }
